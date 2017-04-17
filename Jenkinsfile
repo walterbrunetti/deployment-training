@@ -1,12 +1,5 @@
 pipeline {
     agent any
-    options([
-      parameters([
-        string(name: 'description', defaultValue: ''),
-      ])
-    ])
-
-
     stages {
         stage('Build') {
             steps {
