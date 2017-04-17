@@ -1,5 +1,12 @@
 pipeline {
     agent any
+    properties([
+      parameters([
+        string(name: 'description', defaultValue: ''),
+      ])
+    ])
+
+
     stages {
         stage('Build') {
             steps {
