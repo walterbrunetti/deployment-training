@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    parameters {
+        string(name: 'user', defaultValue: '', description: 'User name')
+    }
     stages {
         stage('Build') {
             steps {
@@ -9,6 +12,20 @@ pipeline {
                     ls -lah
                 '''
             }
+        }
+    }
+    post {
+        always {
+            echo 'One way or another, I have finished'
+        }
+        success {
+            echo 'I succeeeded!'
+        }
+        unstable {
+            echo 'I am unstable :/'
+        }
+        failure {
+            echo 'I failed :('
         }
     }
 }
