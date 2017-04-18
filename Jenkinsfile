@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'echo "Hello World"'
-                echo 'API user: ${params.user}'
+                echo "API user: ${params.user}"
             }
         }
     }
