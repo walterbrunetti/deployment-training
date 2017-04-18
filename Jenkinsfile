@@ -1,5 +1,6 @@
-pipeline {
-    agent any
+#!groovy
+
+node {
     parameters {
         string(name: 'user', defaultValue: '', description: 'User name')
     }
