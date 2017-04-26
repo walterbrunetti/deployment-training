@@ -2,22 +2,6 @@
 
 node {
 
-    
-    properties([
-     parameters([
-       booleanParam(
-         defaultValue: false,
-         description: 'isFoo should be false',
-         name: 'isFoo'
-       ),
-       booleanParam(
-         defaultValue: true,
-         description: 'isBar should be true',
-         name: 'isBar'
-       ),
-     ])
-   ])
-
     stage('Build') {
         sh 'echo "Hello World"'
         echo "API user: ${params.user}"
