@@ -9,6 +9,10 @@ node {
         string(name: 'test', defaultValue: '', description: 'test')
     }
 
+    paramAValue = "paramAValue"
+    paramBValue = "paramBValue"
+    build job: 'downstream-freestyle', parameters: [[$class: 'StringParameterValue', name: 'ParamA', value: paramAValue], [$class: 'StringParameterValue', name: 'ParamB', value: paramBValue]]
+    
     stage('Build') {
         sh 'echo "Hello World"'
         echo "API user: ${params.user}"
