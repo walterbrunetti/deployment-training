@@ -30,7 +30,7 @@ pipeline {
             echo 'I am unstable :/'
         }
         failure {
-            echo 'I failed :('
+            echo 'I failed :(..'
         }
     }
 }
