@@ -1,6 +1,6 @@
 
 node {
-    api  = load("APICommon.groovy");
+    api  = load("${rootDir}@script/APICommon.groovy");
 }
 
 parameters {
