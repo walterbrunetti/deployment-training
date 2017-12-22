@@ -16,8 +16,8 @@ def parse_json(def json_in_string) {
 
 def get_token(def env) {
     
-    def user = "walterbrunetti"
-    def psw = "Staging1234"
+    def user = ""
+    def psw = ""
     
     payload = """{"username": "$user", "password": "$psw"}"""
     
