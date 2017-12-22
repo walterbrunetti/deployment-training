@@ -1,6 +1,6 @@
 
 node {
-    api  = load("${env.WORKSPACE}@script/jenkins/APICommon.groovy");
+    api  = load("${env.WORKSPACE}@script/APICommon.groovy");
 }
 
 parameters {
