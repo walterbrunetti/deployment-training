@@ -22,7 +22,7 @@ def get_token(def env) {
     payload = """{"username": "$user", "password": "$psw"}"""
     
     def url = get_env_url(env) + "/auth/"
-    def response = httpRequest acceptType: 'APPLICATION_JSON', contentType: 'APPLICATION_JSON', httpMode: 'POST', requestBody: auth_payload, url: url, ignoreSslErrors: true
+    def response = httpRequest acceptType: 'APPLICATION_JSON', contentType: 'APPLICATION_JSON', httpMode: 'POST', requestBody: payload, url: url, ignoreSslErrors: true
     def content = parse_json(response.content)
     return content["token"]
 }
